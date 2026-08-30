@@ -35,8 +35,8 @@ Emacs major mode (`zshrs-mode`) for **[zshrs](https://github.com/MenkeTechnologi
 
 The token tables in `zshrs-stdlib.el` are **generated** (`scripts/gen-stdlib.sh`) directly from the zshrs binary's own reflection tables (`zshrs --dump-reflection`), so they carry the real surface and never drift:
 
-- **137 builtins** — `.builtins | keys[]` (word identifiers, minus keyword + extension names)
-- **113 extensions** — `.extensions | keys[]` (the zshrs-specific additions)
+- **138 builtins** — `.builtins | keys[]` (word identifiers, minus keyword + extension names)
+- **112 extensions** — `.extensions | keys[]` (the zshrs-specific additions)
 - **245 special vars** — `.special_vars | keys[]` (word-identifier names)
 
 Unlike emacs-stryke (10,450 builtins, hash tables to dodge the regexp-size limit), the zshrs surface is small enough that each category is a single precomputed `regexp-opt` alternation — no hash tables, no `"Regular expression too big"`.

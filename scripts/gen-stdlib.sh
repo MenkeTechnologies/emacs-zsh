@@ -37,7 +37,7 @@ refl="$tmp/refl.json"
 "$zshrs" --dump-reflection > "$refl"
 
 jq -r '.extensions | keys[]'   "$refl" | grep -E "$ident_re" | sort -u > "$tmp/ext.txt"
-jq -r '.special_vars | keys[]' "$refl" | grep -E "$ident_re" | sort -u > "$tmp/sv.txt"
+jq -r '.special_vars | keys[]' "$refl" | perl -pe 's/^\$//' | grep -E "$ident_re" | sort -u > "$tmp/sv.txt"
 jq -r '.builtins | keys[]'     "$refl" | grep -E "$ident_re" | sort -u > "$tmp/b_all.txt"
 
 # Static keyword names font-locked as keywords in zshrs-mode.el — kept in sync
