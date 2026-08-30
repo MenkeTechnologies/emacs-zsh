@@ -39,7 +39,7 @@ The token tables in `zshrs-stdlib.el` are **generated** (`scripts/gen-stdlib.sh`
 - **112 extensions** — `.extensions | keys[]` (the zshrs-specific additions)
 - **245 special vars** — `.special_vars | keys[]` (word-identifier names)
 
-Unlike emacs-stryke (10,450 builtins, hash tables to dodge the regexp-size limit), the zshrs surface is small enough that each category is a single precomputed `regexp-opt` alternation — no hash tables, no `"Regular expression too big"`.
+Unlike emacs-stryke (10,452 builtins, hash tables to dodge the regexp-size limit), the zshrs surface is small enough that each category is a single precomputed `regexp-opt` alternation — no hash tables, no `"Regular expression too big"`.
 
 Created by **[MenkeTechnologies](https://github.com/MenkeTechnologies)**.
 
