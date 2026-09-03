@@ -51,8 +51,8 @@ Created by **[MenkeTechnologies](https://github.com/MenkeTechnologies)**.
 |---|---|
 | Filetype detection — dotfiles + `*.zsh` | **Implemented** — `auto-mode-alist` |
 | Filetype detection — shebang | **Implemented** — `interpreter-mode-alist` (`zsh`, `zshrs`) |
-| Syntax highlighting — builtins (137) | **Implemented** — `regexp-opt` from reflection |
-| Syntax highlighting — extensions (113) | **Implemented** — own `zshrs-extension-face` (bold) |
+| Syntax highlighting — builtins (138) | **Implemented** — `regexp-opt` from reflection |
+| Syntax highlighting — extensions (112) | **Implemented** — own `zshrs-extension-face` (bold) |
 | Syntax highlighting — special vars (245) | **Implemented** — `$NAME` + bare |
 | Comments | **Implemented** — `#` line comments via syntax table |
 | Indentation | **Implemented** — shell-block + brace-aware `zshrs-indent-line` |
@@ -93,8 +93,8 @@ Open any zsh file — it lights up. With eglot, run `M-x eglot` to start the lan
 |---|---|
 | Control flow (`if` `for` `while` `case` `do` `done`) | `font-lock-keyword-face` |
 | Declarations (`typeset` `local` `export` `readonly` `integer`) | `font-lock-keyword-face` |
-| Extensions (113 zshrs-specific) | `zshrs-extension-face` (bold) |
-| Builtins (137) | `font-lock-builtin-face` |
+| Extensions (112 zshrs-specific) | `zshrs-extension-face` (bold) |
+| Builtins (138) | `font-lock-builtin-face` |
 | Special variables (245) | `font-lock-variable-name-face` |
 | Sigil variables (`$foo` `${...}` `$1`) | `font-lock-variable-name-face` |
 | Punctuation sigils (`$?` `$@` `$#` `$$` `$!` `$*`) | `font-lock-constant-face` |
