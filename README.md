@@ -39,7 +39,7 @@ The token tables in `zshrs-stdlib.el` are **generated** (`scripts/gen-stdlib.sh`
 - **112 extensions** — `.extensions | keys[]` (the zshrs-specific additions)
 - **245 special vars** — `.special_vars | keys[]` (word-identifier names)
 
-Unlike emacs-stryke (10,452 builtins, hash tables to dodge the regexp-size limit), the zshrs surface is small enough that each category is a single precomputed `regexp-opt` alternation — no hash tables, no `"Regular expression too big"`.
+Unlike emacs-stryke (hash tables to dodge the regexp-size limit), the zshrs surface is small enough that each category is a single precomputed `regexp-opt` alternation — no hash tables, no `"Regular expression too big"`.
 
 Created by **[MenkeTechnologies](https://github.com/MenkeTechnologies)**.
 
@@ -96,8 +96,8 @@ Open any zsh file — it lights up. With eglot, run `M-x eglot` to start the lan
 | Extensions (112 zshrs-specific) | `zshrs-extension-face` (bold) |
 | Builtins (138) | `font-lock-builtin-face` |
 | Special variables (245) | `font-lock-variable-name-face` |
-| Sigil variables (`$foo` `${...}` `$1`) | `font-lock-variable-name-face` |
-| Punctuation sigils (`$?` `$@` `$#` `$$` `$!` `$*`) | `font-lock-constant-face` |
+| Sigil variables (`$foo` `${...}`) | `font-lock-variable-name-face` |
+| Punctuation sigils (`$?` `$@` `$#` `$$` `$!` `$*` `$1`) | `font-lock-constant-face` |
 | Strings / comments | via syntax table |
 
 ---
