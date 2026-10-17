@@ -35,9 +35,9 @@ Emacs major mode (`zshrs-mode`) for **[zshrs](https://github.com/MenkeTechnologi
 
 The token tables in `zshrs-stdlib.el` are **generated** (`scripts/gen-stdlib.sh`) directly from the zshrs binary's own reflection tables (`zshrs --dump-reflection`), so they carry the real surface and never drift:
 
-- **138 builtins** — `.builtins | keys[]` (word identifiers, minus keyword + extension names)
-- **112 extensions** — `.extensions | keys[]` (the zshrs-specific additions)
-- **245 special vars** — `.special_vars | keys[]` (word-identifier names)
+- **builtins** — `.builtins | keys[]` (word identifiers, minus keyword + extension names)
+- **extensions** — `.extensions | keys[]` (the zshrs-specific additions)
+- **special vars** — `.special_vars | keys[]` (word-identifier names)
 
 Unlike emacs-stryke (hash tables to dodge the regexp-size limit), the zshrs surface is small enough that each category is a single precomputed `regexp-opt` alternation — no hash tables, no `"Regular expression too big"`.
 
@@ -51,9 +51,9 @@ Created by **[MenkeTechnologies](https://github.com/MenkeTechnologies)**.
 |---|---|
 | Filetype detection — dotfiles + `*.zsh` | **Implemented** — `auto-mode-alist` |
 | Filetype detection — shebang | **Implemented** — `interpreter-mode-alist` (`zsh`, `zshrs`) |
-| Syntax highlighting — builtins (138) | **Implemented** — `regexp-opt` from reflection |
-| Syntax highlighting — extensions (112) | **Implemented** — own `zshrs-extension-face` (bold) |
-| Syntax highlighting — special vars (245) | **Implemented** — `$NAME` + bare |
+| Syntax highlighting — builtins | **Implemented** — `regexp-opt` from reflection |
+| Syntax highlighting — extensions | **Implemented** — own `zshrs-extension-face` (bold) |
+| Syntax highlighting — special vars | **Implemented** — `$NAME` + bare |
 | Comments | **Implemented** — `#` line comments via syntax table |
 | Indentation | **Implemented** — shell-block + brace-aware `zshrs-indent-line` |
 | Lint | **Implemented** — `zshrs-lint-buffer` runs `zshrs -n` |
@@ -93,9 +93,9 @@ Open any zsh file — it lights up. With eglot, run `M-x eglot` to start the lan
 |---|---|
 | Control flow (`if` `for` `while` `case` `do` `done`) | `font-lock-keyword-face` |
 | Declarations (`typeset` `local` `export` `readonly` `integer`) | `font-lock-keyword-face` |
-| Extensions (112 zshrs-specific) | `zshrs-extension-face` (bold) |
-| Builtins (138) | `font-lock-builtin-face` |
-| Special variables (245) | `font-lock-variable-name-face` |
+| Extensions (zshrs-specific) | `zshrs-extension-face` (bold) |
+| Builtins | `font-lock-builtin-face` |
+| Special variables | `font-lock-variable-name-face` |
 | Sigil variables (`$foo` `${...}`) | `font-lock-variable-name-face` |
 | Punctuation sigils (`$?` `$@` `$#` `$$` `$!` `$*` `$1`) | `font-lock-constant-face` |
 | Strings / comments | via syntax table |
